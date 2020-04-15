@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/*Breakpoints*/
+.Navbar {
+  height: 10vh;
+  width: 100%;
+  background-color: #0c0a0a;
+}
+
+.Navbar .Navbar__menu {
+  list-style-type: none;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  pointer-events: none;
+}
+
+.Navbar .Navbar__menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .Navbar{
+    position: relative;
+  }
+
+  .Navbar .Navbar__btn{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 1;
+  }
+
+  .Navbar .Navbar__btn .line{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+
+  .Navbar .Navbar__menu{
+    position: fixed;
+    background-color: #0c0a0a;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(0px at 90% -10%);
+    -webkit-clip-path: circle(0px at 90% -10%);
+    transition: all 1s ease-out;
+  }
+
+  .Navbar .Navbar__menu.open{
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .Navbar .Navbar__menu li{
+    opacity: 0;
+    transition: all ease .2s;
+  }
+
+  .Navbar .Navbar__menu li.fade{
+    opacity: 1;
+  }
+
+}
+
