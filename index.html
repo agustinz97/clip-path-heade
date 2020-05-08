@@ -9,20 +9,33 @@
     <script src="./js/fontawesome.js"></script>
 </head>
 <body>
-    <nav class="Navbar">
-        <div class="Navbar__btn">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+    <header class="Header">
+        <nav class="Navbar">
+			<h1 class="Header__title">Agustin Zamar</h1>
 
-        <ul class="Navbar__menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+            <div class="Navbar__btn">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+    
+            <ul class="Navbar__menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mi</a></li>
+                <li>
+					<a href="#">Desplegable</a>
+					<div class="Navbar__menu--dropdown">
+						<a href="#">Cosa 1</a>
+						<a href="#">Cosa 2</a>
+						<a href="#">Este es mas largo</a>
+					</div>
+				</li>
+                <li><a href="/blog.html">NI idea</a></li>
+                <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+	</header>
 
     <script src="./js/header.js"></script>
 </body>
